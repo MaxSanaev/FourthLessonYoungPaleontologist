@@ -9,49 +9,43 @@ import android.widget.ImageButton;
 
 public class SecondActivity extends AppCompatActivity {
 
-    // создание полей
-    private ImageButton imageButtonCenozoic;
-    private ImageButton imageButtonMesozoic;
-    private ImageButton imageButtonPaleozoic;
+    private ImageButton imageButtonFlower;
+    private ImageButton imageButtonMox;
+    private ImageButton imageButtonXvoa;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        // присваивание id полям
-        imageButtonCenozoic = findViewById(R.id.imageButtonCenozoic);
-        imageButtonMesozoic = findViewById(R.id.imageButtonMesozoic);
-        imageButtonPaleozoic = findViewById(R.id.imageButtonPaleozoic);
+        imageButtonFlower = findViewById(R.id.imageButtonFlower);
+        imageButtonMox = findViewById(R.id.imageButtonMox);
+        imageButtonXvoa = findViewById(R.id.imageButtonXvoa);
 
-        // обработка нажатия кнопки
-        imageButtonCenozoic.setOnClickListener(listener);
-        imageButtonMesozoic.setOnClickListener(listener);
-        imageButtonPaleozoic.setOnClickListener(listener);
+        imageButtonFlower.setOnClickListener(listener);
+        imageButtonMox.setOnClickListener(listener);
+        imageButtonXvoa.setOnClickListener(listener);
     }
 
-    // создание слушателя
     private View.OnClickListener listener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
 
-            // переключение на новую активность
             switch (view.getId()) {
-                case R.id.imageButtonCenozoic:
-                    Intent intentCenozoic = new Intent(getApplicationContext(), CenozoicActivity.class); // переключение на новую активность кайнозойского периода
-                    intentCenozoic.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT); // использование флага перемещения нужной активности на вершину стека
-                    startActivity(intentCenozoic);
+                case R.id.imageButtonFlower:
+                    Intent intentFlower = new Intent(getApplicationContext(), FlowersActivity.class);
+                    intentFlower.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
+                    startActivity(intentFlower);
                     break;
-                case R.id.imageButtonMesozoic:
-                    Intent intentMesozoic = new Intent(getApplicationContext(), MesozoicActivity.class); // переключение на новую активность мезозойского периода
-                    intentMesozoic.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // использование флага уничтожения всех активности кроме той которая требуется
-                    startActivity(intentMesozoic);
+                case R.id.imageButtonMox:
+                    Intent intentMox = new Intent(getApplicationContext(), MoxActivity.class);
+                    intentMox.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intentMox);
                     break;
-                case R.id.imageButtonPaleozoic:
-                    Intent intentPaleozoic = new Intent(getApplicationContext(), PaleozoicActivity.class); // переключение на новую активность палеозойского периода
-                    intentPaleozoic.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP); // использование флага перехода к нужной активности
-                    // без перемещения данной активности в стеке
-                    startActivity(intentPaleozoic);
+                case R.id.imageButtonXvoa:
+                    Intent intentXvoa = new Intent(getApplicationContext(), XvoaActivity.class);
+                    intentXvoa.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                    startActivity(intentXvoa);
                     break;
             }
         }

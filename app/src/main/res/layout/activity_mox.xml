@@ -4,33 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_paleontology"
-    android:scaleType="fitXY"
-    tools:context=".PaleozoicActivity">
+    android:background="@drawable/background_main"
+    android:scaleType="centerCrop"
+    tools:context=".MoxActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:layout_marginTop="50dp"
-        android:text="Список животных палеозойского периода"
-        android:textSize="23sp"
-        android:textStyle="bold"
-        android:textColor="#D6CFB0"
         android:background="@drawable/shape_text"
         android:gravity="center"
+        android:text="Список мхов"
+        android:textColor="#D6CFB0"
+        android:textSize="23sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/paleozoicIn"
+        android:id="@+id/moxIn"
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:layout_marginTop="28dp"
-        android:background="@drawable/shape_paleozoic"
+        android:background="@drawable/shape_mox"
         android:gravity="center"
-        android:hint="Окно ввода нового животного"
+        android:hint="Окно ввода нового растения"
         android:textColor="#3E3A29"
         android:textColorHint="#7A7352"
         android:textSize="21sp"
@@ -45,39 +45,43 @@
         android:layout_width="350dp"
         android:layout_height="80dp"
         android:layout_marginTop="14dp"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/paleozoicIn">
+        app:layout_constraintTop_toBottomOf="@+id/moxIn">
 
         <ImageButton
             android:id="@+id/btnAdd"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:scaleType="fitXY"
-            android:backgroundTint="@null"
-            android:background="@null"
             android:layout_marginEnd="50dp"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/btn_add" />
+
         <ImageButton
             android:id="@+id/btnDelete"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:scaleType="fitXY"
-            android:backgroundTint="@null"
             android:background="@null"
+            android:backgroundTint="@null"
+            android:scaleType="fitXY"
             app:srcCompat="@drawable/btn_delete" />
     </LinearLayout>
 
     <ListView
-        android:id="@+id/paleozoicList"
+        android:id="@+id/moxList"
         android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:background="@drawable/shape_paleozoic"
-        android:layout_marginTop="14dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/shape_mox"
         android:choiceMode="multipleChoice"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutButton" />
 

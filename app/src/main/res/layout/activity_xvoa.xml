@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_paleontology"
-    android:scaleType="fitXY"
-    tools:context=".MesozoicActivity">
-
+    android:background="@drawable/background_main"
+    android:scaleType="centerCrop"
+    tools:context=".XvoaActivity">
     <TextView
         android:id="@+id/textView"
         android:layout_width="350dp"
         android:layout_height="70dp"
         android:layout_marginTop="50dp"
-        android:text="Список животных мезозойского периода"
+        android:text="Список хвойны растений"
         android:textSize="23sp"
         android:textStyle="bold"
         android:textColor="#D6CFB0"
@@ -24,29 +23,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
-        android:id="@+id/mesozoicList"
+        android:id="@+id/xvoaList"
         android:layout_width="350dp"
         android:layout_height="410dp"
         android:layout_marginTop="30dp"
-        android:background="@drawable/shape_mesozoic"
+        android:textColor="@android:color/white"
+        android:padding="8dp"
+        android:background="@drawable/shape_xvoa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/mesozoicOut"
+        android:id="@+id/xvoaOut"
         android:layout_width="350dp"
         android:layout_height="100dp"
         android:layout_marginTop="28dp"
-        android:hint="Окно вывода выбранного животного"
+        android:hint="Окно вывода выбранного растения"
         android:textSize="21sp"
         android:textStyle="bold"
-        android:textColor="#3E3A29"
-        android:textColorHint="#7A7352"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:gravity="center"
-        android:background="@drawable/shape_mesozoic"
+        android:background="@drawable/shape_xvoa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mesozoicList" />
+        app:layout_constraintTop_toBottomOf="@+id/xvoaList"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
